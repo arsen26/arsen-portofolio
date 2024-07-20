@@ -1,6 +1,6 @@
 <template>
-  <v-container class="container">
-    <v-row style="color: white; text-align: center">
+  <div class="container">
+    <v-row style="color: black; text-align: center">
       <v-col>
         <h2 class="education-word-style">Education and trainings</h2>
       </v-col>
@@ -9,18 +9,18 @@
       <v-col>
         <v-timeline align="start">
           <v-timeline-item
-            dot-color="#04ECDC"
+            dot-color="#ffff"
             fill-dot="true"
-            class="timeline-point-style"
+            class="neon-dot"
             v-for="(item, index) in content"
-            key="index"
+            :key="index"
           >
             <template v-slot:opposite>
-              <span class="text-container-timeline">
+              <span class="year-style">
                 {{ item.year }}
               </span>
             </template>
-            <div>
+            <div class="timeline-container">
               <div class="text-h6 text-container-timeline">
                 {{ item.title }}
               </div>
@@ -32,7 +32,7 @@
         </v-timeline>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -57,7 +57,7 @@ export default {
             "I started a new position job as a front end developer at 2RM Lab",
         },
         {
-          year: 2023 + "- Now",
+          year: "2023 - Now",
           title: "Front End Developer",
           description:
             "I started a new position job as a front end developer at 2RM Lab",
@@ -67,17 +67,65 @@ export default {
   },
 };
 </script>
+
 <style scoped>
+.year-style {
+  color: white;
+}
 .container {
-  justify-content: center;
-  align-content: center;
+  background-color: #090809;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
 }
+
 .education-word-style {
+  color: white;
   font-size: 40px;
+  margin-top: 140px;
 }
+
 .text-container-timeline {
-  color: white !important;
+  color: white;
+}
+
+.timeline-container {
+  background-color: #090809;
+  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 10px #04ecdc,
+    0 0 30px #04ecdc;
+  /* border: 2px solid #04ECDC; */
+  border-radius: 10px;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  transition: all 0.3s ease;
+
+}
+
+.timeline-container:hover {
+  background-color: #090809;
+  box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc,
+    0 0 55px #04ecdc;
+  /* border: 2px solid #04ECDC; */
+  border-radius: 10px;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  transform: scale(1.01);
+}
+.timeline-container:hover .text-container-timeline {
+  color: white;
+  text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 40px #04ecdc;
+}
+
+.neon-dot {
+  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 40px #04ecdc !important;
 }
 </style>

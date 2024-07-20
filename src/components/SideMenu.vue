@@ -33,6 +33,7 @@ export default {
 </script>
 <style scoped>
 .menu {
+  background-color: #090809;
   height: 70px;
 }
 .toolbar {

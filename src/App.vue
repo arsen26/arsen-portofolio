@@ -4,6 +4,7 @@
       <SideMenu/>
       <Hero/>
       <EducationVue/>
+      <Services/>
     </v-main>
   </v-app>
 </template>
@@ -12,13 +13,15 @@
 import SideMenu from './components/SideMenu.vue';
 import Hero from './components/Hero.vue'
 import EducationVue from './components/Education.vue';
+import Services from './components/Services.vue'
 export default {
   name: 'App',
 
  components:{
     SideMenu,
     Hero,
-    EducationVue
+    EducationVue,
+    Services
  },
 
   data: () => ({
@@ -27,7 +30,7 @@ export default {
 }
 </script>
 <style scoped>
-  .entire-app{
+  /* .entire-app{
     background-color: #090809;
-  }
+  } */
 </style>
