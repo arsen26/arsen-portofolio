@@ -11,7 +11,7 @@
         <h1 class="title">Services</h1>
       </v-row>
       <v-row class="v-col-card-style" style="justify-content: center">
-        <v-col v-for="(variant, i) in services" :key="i" cols="8" md="6">
+        <v-col v-for="(variant, i) in services" :key="i" cols="12" md="6">
           <v-card class="mx-auto v-card-style">
             <v-card-item class="card-text-container">
               <div>
@@ -39,6 +39,7 @@
           <v-expansion-panel
             class="expansion-panel-title"
             :key="i"
+            style="border-radius: 8px !important"
             :text="variant.description"
             :title="variant.name"
           ></v-expansion-panel>
@@ -116,11 +117,13 @@ export default {
   height: 170px;
   border-radius: 15px;
   transition: all 0.3s ease;
+  /* opacity: 85%; */
 }
 
 .v-card-style:hover {
   background-color: #04ecdc;
-  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc, 0 0 20px #04ecdc;
+  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 20px #04ecdc;
   height: 170px;
   border-radius: 15px;
   transform: scale(1.01);
@@ -131,6 +134,67 @@ export default {
     background-color: #04ecdc;
     height: max-content;
     border-radius: 15px;
+  }
+  .v-card-style:hover {
+    background-color: #04ecdc;
+    box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+      0 0 20px #04ecdc;
+    height: max-content;
+    border-radius: 15px;
+    transform: scale(1.01);
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1500px) {
+  .v-card-style {
+    background-color: #04ecdc;
+    height: 200px;
+    border-radius: 15px;
+  }
+  .v-card-style:hover {
+    background-color: #04ecdc;
+    box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+      0 0 20px #04ecdc;
+    height: 200px;
+    border-radius: 15px;
+    transform: scale(1.01);
+  }
+  .card-text-container {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 950px) and (max-width: 1150px) {
+  .v-card-style {
+    background-color: #04ecdc;
+    height: 250px;
+    border-radius: 15px;
+  }
+  .v-card-style:hover {
+    background-color: #04ecdc;
+    box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+      0 0 20px #04ecdc;
+    height: 250px;
+    border-radius: 15px;
+    transform: scale(1.01);
+  }
+  .card-text-container {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 959px) {
+  .v-card-style {
+    background-color: #04ecdc;
+    height: max-content;
+    border-radius: 15px;
+  }
+  .v-card-style:hover {
+    background-color: #04ecdc;
+    box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+      0 0 20px #04ecdc;
+      height: max-content;
+    border-radius: 15px;
+    transform: scale(1.01);
   }
 }
 

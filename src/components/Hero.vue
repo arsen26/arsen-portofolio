@@ -14,10 +14,11 @@
         now accumulated over a year of experience.
       </p>
       <i class="bx social-media-icon bxl-instagram"></i>
-
       <i class="bx social-media-icon bxl-facebook"></i>
       <i class="bx social-media-icon bxl-linkedin"></i>
       <i class="bx social-media-icon bxl-github"></i>
+      <i class="bx social-media-icon bx-news"></i>
+
     </div>
     <div class="image-container">
       <img
@@ -78,12 +79,50 @@ export default {
 }
 .social-media-icon {
   font-size: 35px;
+  transition: all 0.3s ease;
 }
+
 .social-media-icon:hover {
   cursor: pointer;
   font-size: 37px;
   color: #04ecdc;
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
+}
+
+@keyframes glow {
+  0%, 100% {
+    color: white;
+    text-shadow: none;
+  }
+  50% {
+    color: #04ecdc;
+    text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
+  }
+}
+
+.bxl-instagram {
+  animation: glow 2s infinite;
+  animation-delay: 0s;
+}
+
+.bxl-facebook {
+  animation: glow 2s infinite;
+  animation-delay: 0.5s;
+}
+
+.bxl-linkedin {
+  animation: glow 2s infinite;
+  animation-delay: 1s;
+}
+
+.bxl-github {
+  animation: glow 2s infinite;
+  animation-delay: 1.5s;
+}
+
+.bx-news {
+  animation: glow 2s infinite;
+  animation-delay: 2s;
 }
 .image-hero-style {
   position: relative;

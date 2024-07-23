@@ -1,10 +1,11 @@
 <template>
   <v-app class="entire-app">
     <v-main>
-      <SideMenu/>
+      <SideMenu class="menu-navigation-bar"/>
       <Hero/>
       <EducationVue/>
       <Services/>
+      <Footer/>
     </v-main>
   </v-app>
 </template>
@@ -14,6 +15,7 @@ import SideMenu from './components/SideMenu.vue';
 import Hero from './components/Hero.vue'
 import EducationVue from './components/Education.vue';
 import Services from './components/Services.vue'
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
 
@@ -21,7 +23,9 @@ export default {
     SideMenu,
     Hero,
     EducationVue,
-    Services
+    Services,
+    Footer
+    
  },
 
   data: () => ({
@@ -30,7 +34,16 @@ export default {
 }
 </script>
 <style scoped>
-  /* .entire-app{
-    background-color: #090809;
-  } */
+.menu-navigation-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+.entire-app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 </style>

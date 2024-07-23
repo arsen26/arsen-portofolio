@@ -103,7 +103,6 @@ export default {
   overflow-wrap: break-word;
   width: 100%;
   transition: all 0.3s ease;
-
 }
 
 .timeline-container:hover {

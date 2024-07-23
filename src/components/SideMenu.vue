@@ -2,10 +2,12 @@
   <v-card class="menu">
     <v-layout>
       <v-toolbar class="toolbar">
-        <h3 class="name-style">Arsen <span class="last-name-style">Cenollari</span></h3>
+        <h3 class="name-style">
+          Arsen <span class="last-name-style">Cenollari</span>
+        </h3>
         <v-spacer></v-spacer>
         <v-btn
-        variant="text"
+          variant="text"
           class="button-style"
           v-for="(item, index) in menuItems"
           :key="index"
@@ -34,6 +36,7 @@ export default {
 <style scoped>
 .menu {
   background-color: #090809;
+  border-radius: 0px;
   height: 70px;
 }
 .toolbar {
@@ -42,19 +45,20 @@ export default {
 .button-style {
   color: white;
 }
-.button-style:hover{
-    color: #04ECDC;
-    text-shadow: 0 0 5px #04ECDC, 0 0 10px #04ECDC, 0 0 20px #04ECDC, 0 0 40px #04ECDC;
-
+.button-style:hover {
+  color: #04ecdc;
+  text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 40px #04ecdc;
 }
-.last-name-style{
-  color: #04ECDC;
-  text-shadow: 0 0 5px #04ECDC, 0 0 10px #04ECDC, 0 0 20px #04ECDC, 0 0 40px #04ECDC;
+.last-name-style {
+  color: #04ecdc;
+  text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 40px #04ecdc;
 }
-.name-style{
+.name-style {
   padding-left: 15px;
   color: white;
-    text-decoration: none !important;
+  text-decoration: none !important;
   text-shadow: 0 0 5px #ffff, 0 0 10px #ffff, 0 0 20px #ffff, 0 0 20px #ffff;
 }
 </style>
