@@ -17,7 +17,9 @@
             v-for="(insideElement, index) in column.insideElements"
             :key="index"
           >
-            <v-icon class="icon-style-at-footer" v-if="i !== 0">{{ insideElement.path }}</v-icon>
+            <v-icon class="icon-style-at-footer" v-if="i !== 0">{{
+              insideElement.path
+            }}</v-icon>
             {{ insideElement.insideElementTitle }}
           </li>
         </ul>
@@ -87,8 +89,8 @@ export default {
 </script>
 
 <style scoped>
-.icon-style-at-footer{
-    margin-bottom: 5px;
+.icon-style-at-footer {
+  margin-bottom: 5px;
 }
 .footer-style {
   background-color: #04ecdc;
@@ -127,6 +129,7 @@ export default {
   text-shadow: 0 0 5px #ffff, 0 0 10px #ffff, 0 0 20px #ffff, 0 0 40px #ffff;
 }
 .list-element-style {
+  cursor: pointer;
   color: white;
   padding-top: 5px;
   align-items: center !important;
