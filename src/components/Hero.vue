@@ -4,7 +4,7 @@
       <h2 class="first-title-style">Hi, It's Arsen...</h2>
       <h1>I'm <span class="skills-style" id="typed"></span></h1>
 
-      <p>
+      <p class="paragraph-about-me-style">
         ...a 22-year-old with a degree in Computer Science from the
         <a class="link-for-faculty" @click.prevent="openUniversity"
           >Faculty of Natural Sciences</a
@@ -20,6 +20,7 @@
       <i class="bx social-media-icon bx-news"></i>
 
     </div>
+    <v-spacer></v-spacer>
     <div class="image-container">
       <img
         class="image-hero-style"
@@ -81,7 +82,9 @@ export default {
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
 }
 .first-title-style {
-  font-size: 55px;
+  font-family: "Russian Dollmaker";
+  font-weight: 100;
+  font-size: 105px;
 }
 .social-media-icon {
   font-size: 35px;
@@ -167,11 +170,16 @@ export default {
   position: relative;
   width: 350px; 
   height: fit-content;
-  margin-right: 50px;
+  margin-right: 70px;
   margin-bottom: 120px;
 }
 .skills-style {
+  font-family: "Roboto Mono", monospace !important;
   color: #04ecdc;
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
+}
+.paragraph-about-me-style{
+  font-family: "Roboto Mono", monospace !important;
+  /* max-width: 400px; */
 }
 </style>
