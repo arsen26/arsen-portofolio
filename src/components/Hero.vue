@@ -18,15 +18,10 @@
       <i class="bx social-media-icon bxl-linkedin"></i>
       <i class="bx social-media-icon bxl-github"></i>
       <i class="bx social-media-icon bx-news"></i>
-
     </div>
     <v-spacer></v-spacer>
     <div class="image-container">
-      <img
-        class="image-hero-style"
-        :src="ProfilePhoto"
-        alt="Profile Photo"
-      />
+      <img class="image-hero-style" :src="ProfilePhoto" alt="Profile Photo" />
       <img
         class="background-image"
         :src="BackgroundImage"
@@ -40,13 +35,13 @@
 import Typed from "typed.js";
 import "boxicons/css/boxicons.min.css";
 import ProfilePhoto from "@/assets/arsen-linkedin.png";
-import BackgroundImage from '@/assets/background-linkedin.png'
+import BackgroundImage from "@/assets/background-linkedin.png";
 
 export default {
   data() {
     return {
       ProfilePhoto,
-      BackgroundImage
+      BackgroundImage,
     };
   },
 
@@ -99,7 +94,8 @@ export default {
 }
 
 @keyframes glow {
-  0%, 100% {
+  0%,
+  100% {
     color: white;
     text-shadow: none;
   }
@@ -146,7 +142,6 @@ export default {
 .background-image {
   width: 42vw;
   transform: translate(-36%, 30%);
-
 }
 .container {
   position: relative;
@@ -157,7 +152,7 @@ export default {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color:   #222831;
+  background-color: #222831;
 }
 
 .text-container {
@@ -168,7 +163,7 @@ export default {
 .image-container {
   align-items: center !important;
   position: relative;
-  width: 350px; 
+  width: 350px;
   height: fit-content;
   margin-right: 70px;
   margin-bottom: 120px;
@@ -178,7 +173,7 @@ export default {
   color: #04ecdc;
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
 }
-.paragraph-about-me-style{
+.paragraph-about-me-style {
   font-family: "Roboto Mono", monospace !important;
   /* max-width: 400px; */
 }
