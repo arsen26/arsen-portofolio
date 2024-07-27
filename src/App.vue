@@ -4,6 +4,7 @@
       <SideMenu class="menu-navigation-bar"/>
       <Hero/>
       <EducationVue/>
+      <Projects/>
       <Services/>
       <Footer/>
     </v-main>
@@ -16,6 +17,9 @@ import Hero from './components/Hero.vue'
 import EducationVue from './components/Education.vue';
 import Services from './components/Services.vue'
 import Footer from './components/Footer.vue'
+import Projects from './components/Projects.vue'
+
+
 export default {
   name: 'App',
 
@@ -24,7 +28,8 @@ export default {
     Hero,
     EducationVue,
     Services,
-    Footer
+    Footer,
+    Projects
     
  },
 

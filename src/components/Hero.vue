@@ -23,8 +23,12 @@
     <div class="image-container">
       <img
         class="image-hero-style"
-        :width="300"
         :src="ProfilePhoto"
+        alt="Profile Photo"
+      />
+      <img
+        class="background-image"
+        :src="BackgroundImage"
         alt="Profile Photo"
       />
     </div>
@@ -35,11 +39,13 @@
 import Typed from "typed.js";
 import "boxicons/css/boxicons.min.css";
 import ProfilePhoto from "@/assets/arsen-linkedin.png";
+import BackgroundImage from '@/assets/background-linkedin.png'
 
 export default {
   data() {
     return {
       ProfilePhoto,
+      BackgroundImage
     };
   },
 
@@ -125,31 +131,44 @@ export default {
   animation-delay: 2s;
 }
 .image-hero-style {
-  position: relative;
-  width: 32vw;
-  border-radius: 50%;
-  filter: drop-shadow(0 0 0.75rem #04ecdc);
+  position: absolute;
+  top: 50%;
+  /* left: 50%; */
+  transform: translate(-20%, -30%);
+  width: 16vw;
+  filter: drop-shadow(0rem 0rem 1.95rem #04ecdc);
+  z-index: 1;
+}
+
+.background-image {
+  width: 42vw;
+  transform: translate(-36%, 30%);
+
 }
 .container {
   position: relative;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 50px;
   width: 100% !important;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: #090809;
+  background-color:   #222831;
 }
 
 .text-container {
   max-width: 60% !important;
-  padding-left: 15%;
-  padding-right: 0px;
+  padding-left: 5%;
+  /* padding-right: 10px !important; */
 }
 .image-container {
-  flex-shrink: 0;
-  margin-right: 10%;
+  align-items: center !important;
+  position: relative;
+  width: 350px; 
+  height: fit-content;
+  margin-right: 50px;
+  margin-bottom: 120px;
 }
 .skills-style {
   color: #04ecdc;

@@ -94,8 +94,9 @@ export default {
 }
 .footer-style {
   background-color: #04ecdc;
-  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
-    0 0 40px #04ecdc, 0 0 60px #04ecdc;
+  opacity: 90%;
+  height: 20px;
+  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
 }
 .column-style-footer {
   padding-right: 20px;
@@ -105,7 +106,7 @@ export default {
   color: white;
 }
 .container {
-  background-color: black;
+  background-color: #171a1e;
 }
 .last-name-style {
   color: #04ecdc;

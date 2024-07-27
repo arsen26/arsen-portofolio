@@ -3,7 +3,7 @@
     style="
       justify-content: center;
       align-items: center;
-      background-color: #090809;
+      background-color: #222831;
     "
   >
     <div class="container" v-if="!isMobileScreen">
@@ -15,9 +15,9 @@
           <v-card class="mx-auto v-card-style">
             <v-card-item class="card-text-container">
               <div>
-                <div class="text-h6 mb-1">
+                <span class="text-h6 mb-1 text-caption-title">
                   {{ variant.name }}
-                </div>
+                </span>
                 <div class="text-caption">{{ variant.description }}</div>
               </div>
             </v-card-item>
@@ -98,9 +98,19 @@ export default {
 };
 </script>
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+.text-caption {
+  font-family: "Roboto Mono", monospace !important;
+  font-weight: 400;
+}
+.text-caption-title {
+  font-family: "Roboto Mono", monospace !important;
+}
 .title {
+  font-family: "Russian Dollmaker";
   margin-top: 100px;
-  font-size: 40px;
+  font-size: 100px;
+  font-weight: 100;
   color: white;
   padding-bottom: 80px;
 }
@@ -114,7 +124,7 @@ export default {
 }
 .v-card-style {
   background-color: #04ecdc;
-  height: 170px;
+  height: 200px;
   border-radius: 15px;
   transition: all 0.3s ease;
   /* opacity: 85%; */
@@ -124,7 +134,7 @@ export default {
   background-color: #04ecdc;
   box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
     0 0 20px #04ecdc;
-  height: 170px;
+  height: 200px;
   border-radius: 15px;
   transform: scale(1.01);
 }
@@ -148,14 +158,14 @@ export default {
 @media (min-width: 1150px) and (max-width: 1500px) {
   .v-card-style {
     background-color: #04ecdc;
-    height: 200px;
+    height: 230px;
     border-radius: 15px;
   }
   .v-card-style:hover {
     background-color: #04ecdc;
     box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
       0 0 20px #04ecdc;
-    height: 200px;
+    height: 230px;
     border-radius: 15px;
     transform: scale(1.01);
   }
@@ -163,17 +173,17 @@ export default {
     padding-bottom: 20px;
   }
 }
-@media (min-width: 950px) and (max-width: 1150px) {
+@media (min-width: 950px) and (max-width: 1155px) {
   .v-card-style {
     background-color: #04ecdc;
-    height: 250px;
+    height: 290px;
     border-radius: 15px;
   }
   .v-card-style:hover {
     background-color: #04ecdc;
     box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
       0 0 20px #04ecdc;
-    height: 250px;
+    height: 290px;
     border-radius: 15px;
     transform: scale(1.01);
   }
@@ -192,7 +202,7 @@ export default {
     background-color: #04ecdc;
     box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
       0 0 20px #04ecdc;
-      height: max-content;
+    height: max-content;
     border-radius: 15px;
     transform: scale(1.01);
   }
@@ -217,6 +227,7 @@ export default {
   padding-right: 20px;
 }
 .expansion-panel-title {
+  font-family: "Roboto Mono", monospace !important;
   background-color: #04ecdc;
   /* padding-top: 20px; */
   align-items: center;

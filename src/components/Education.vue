@@ -21,7 +21,7 @@
               </span>
             </template>
             <div class="timeline-container">
-              <div class="text-h6 text-container-timeline">
+              <div class="text-container-timeline-title">
                 {{ item.title }}
               </div>
               <p class="text-container-timeline">
@@ -69,11 +69,14 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.cdnfonts.com/css/russian-dollmaker");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 .year-style {
   color: white;
 }
 .container {
-  background-color: #090809;
+  background-color: #222831;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,12 +86,22 @@ export default {
 }
 
 .education-word-style {
+  font-family: "Russian Dollmaker";
+  font-weight: 100;
   color: white;
-  font-size: 40px;
+  font-size: 100px;
   margin-top: 140px;
 }
 
 .text-container-timeline {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+
+  color: white;
+}
+.text-container-timeline-title {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
   color: white;
 }
 
@@ -121,6 +134,12 @@ export default {
   color: white;
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
     0 0 40px #04ecdc;
+}
+
+.timeline-container:hover .text-container-timeline-title {
+  color: white;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 40px #ffffff;
 }
 
 .neon-dot {

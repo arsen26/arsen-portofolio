@@ -35,12 +35,12 @@ export default {
 </script>
 <style scoped>
 .menu {
-  background-color: #090809;
+  background-color: #222831;
   border-radius: 0px;
   height: 70px;
 }
 .toolbar {
-  background-color: #090809;
+  background-color: #171a1e;
 }
 .button-style {
   color: white;
