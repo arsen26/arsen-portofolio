@@ -18,7 +18,18 @@
       <i class="bx social-media-icon bxl-linkedin"></i>
       <i class="bx social-media-icon bxl-github"></i>
       <i class="bx social-media-icon bx-news"></i>
+      <v-row style="padding-top: 10px;"> 
+        <v-btn
+          class="ma-2 download-cv-button"
+          outlined
+          :href="pdfUrl"
+          download="arsen-cenollari.pdf"
+          prepend-icon="mdi-newspaper-variant-multiple"
+          >Download CV</v-btn
+        >
+      </v-row>
     </div>
+
     <v-spacer></v-spacer>
     <div class="image-container">
       <img class="image-hero-style" :src="ProfilePhoto" alt="Profile Photo" />
@@ -36,12 +47,14 @@ import Typed from "typed.js";
 import "boxicons/css/boxicons.min.css";
 import ProfilePhoto from "@/assets/arsen-linkedin.png";
 import BackgroundImage from "@/assets/background-linkedin.png";
+import pdfUrl from "@/assets/arsen-cenollari.pdf";
 
 export default {
   data() {
     return {
       ProfilePhoto,
       BackgroundImage,
+      pdfUrl,
     };
   },
 
@@ -143,6 +156,7 @@ export default {
   width: 42vw;
   transform: translate(-36%, 30%);
 }
+
 .container {
   position: relative;
   padding-top: 200px;
@@ -177,4 +191,16 @@ export default {
   font-family: "Roboto Mono", monospace !important;
   /* max-width: 400px; */
 }
+.download-cv-button{
+  color: #04ecdc;
+  background-color: #171a1e;
+}
+.download-cv-button:hover{
+  color: #04ecdc;
+  background-color: #171a1e;
+  text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
+  box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc;
+  
+}
+
 </style>
