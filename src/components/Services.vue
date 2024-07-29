@@ -28,7 +28,7 @@
 
     <div class="container" v-else>
       <v-row>
-        <h1>Services</h1>
+        <h1 class="title">Services</h1>
       </v-row>
       <v-row class="expansion-style">
         <v-expansion-panels
@@ -112,7 +112,7 @@ export default {
   font-size: 100px;
   font-weight: 100;
   color: white;
-  padding-bottom: 80px;
+  padding-bottom: 10px;
 }
 .card-text-container {
   padding: 20px;

@@ -92,6 +92,7 @@ export default {
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
 }
 .first-title-style {
+  padding-top: 45px;
   font-family: "Russian Dollmaker";
   font-weight: 100;
   font-size: 105px;
@@ -183,9 +184,16 @@ export default {
     background-color: #222831;
     position: relative;
   }
+  .first-title-style {
+    padding-top: 45px;
+    font-family: "Russian Dollmaker";
+    font-weight: 100;
+    font-size: 105px;
+    line-height: 0.8;
+  }
 
   .text-container {
-    position: relative; 
+    position: relative;
     margin-bottom: 120px;
     z-index: 1;
   }

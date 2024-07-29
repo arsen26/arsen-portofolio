@@ -146,4 +146,14 @@ export default {
   box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
     0 0 40px #04ecdc !important;
 }
+@media (max-width: 800px) {
+  .education-word-style {
+    font-family: "Russian Dollmaker";
+    font-weight: 100;
+    color: white;
+    font-size: 100px;
+    margin-top: 140px;
+    line-height: 0.8 !important;
+  }
+}
 </style>
