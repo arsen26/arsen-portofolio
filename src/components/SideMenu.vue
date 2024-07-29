@@ -21,8 +21,8 @@
 
   <v-app-bar v-if="width < 800" color="#171a1e" prominent>
     <v-row class="row-icon-mobile-holder">
-      <h2 class="name-style">
-        Arsen <span class="last-name-style">Cenollari</span>
+      <h2 class="name-style name-style-mobile">
+        Arsen <span class="last-name-style last-name-style-mobile">Cenollari</span>
       </h2>
       <v-spacer></v-spacer>
 
@@ -122,13 +122,47 @@ export default {
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
     0 0 40px #04ecdc;
 }
+@keyframes glow {
+  0%,
+  100% {
+    color: white;
+    text-shadow: none;
+  }
+  50% {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #04ecdc;
+  }
+}
+@keyframes glowSurname {
+  0%,
+  100% {
+    color: #04ecdc;
+    text-shadow: none;
+  }
+  50% {
+    color: #04ecdc;
+    text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
+  }
+}
+
+@media (max-width: 800px) {
+  .name-style-mobile {
+  animation: glow 2s infinite;
+  animation-delay: 0s;
+}
+.last-name-style-mobile {
+  animation: glowSurname 2s infinite;
+  animation-delay: 1.5s;
+}
+
+}
 .name-style {
   padding-left: 15px;
   color: white;
   text-decoration: none !important;
   text-shadow: 0 0 5px #ffff, 0 0 10px #ffff, 0 0 20px #ffff, 0 0 20px #ffff;
 }
-.mobile-icons{
+.mobile-icons {
   color: white !important;
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
     0 0 40px #04ecdc;
