@@ -1,10 +1,10 @@
 <template>
-    <atom-spinner
+  <atom-spinner
     v-if="isLoading"
-  :animation-duration="1000"
-  :size="60"
-  color="#ff1d5e"
-/>
+    :animation-duration="1000"
+    :size="60"
+    color="#ff1d5e"
+  />
   <div class="container">
     <v-form
       class="form-container"
@@ -113,7 +113,7 @@ export default {
       telephone: "",
       subject: "",
       message: "",
-      isLoading:false,
+      isLoading: false,
       valid: true,
       //******************************************************************************************************************************//
       //***************** RREGULLA TE VENDOSURA PER PLOTESIMIN E FUSHAVE (SIPAS DESHIRES) *****************//
@@ -167,7 +167,7 @@ export default {
     //******************************************************************************************************************************//
     //***************** FUNKSJONI QE DO TE PERDORET PER TE DERGUAR EMAIL-IN *****************//
     sendEmail() {
-        this.isLoading = true
+      this.isLoading = true;
       try {
         emailjs.sendForm(
           "service_u1ay0hb", //VENDOSNI SERVICE ID (QE KENI MBAJTUR SHENIM TEK HAPI I MEPARSHEM)
@@ -211,17 +211,19 @@ export default {
 .text-style {
   color: white;
   font-family: "Roboto Mono", monospace !important;
-
 }
 
 .form-container {
   padding-bottom: 40px;
   padding-top: 40px;
+  width: 90%;
 }
 .container {
+  display: flex;
   background-color: #222831;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 .submit-email-button {
   font-family: "Roboto Mono", monospace !important;

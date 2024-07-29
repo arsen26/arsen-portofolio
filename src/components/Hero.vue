@@ -18,7 +18,7 @@
       <i class="bx social-media-icon bxl-linkedin"></i>
       <i class="bx social-media-icon bxl-github"></i>
       <i class="bx social-media-icon bx-news"></i>
-      <v-row style="padding-top: 10px;"> 
+      <v-row style="padding-top: 10px">
         <v-btn
           class="ma-2 download-cv-button"
           outlined
@@ -159,33 +159,59 @@ export default {
   transform: translate(-36%, 30%);
 }
 
-@media (min-width:800px){
+@media (min-width: 800px) {
   .container {
-  position: relative;
-  padding-top: 200px;
-  padding-bottom: 50px;
-  width: 100% !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #222831;
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #222831;
+  }
 }
+@media (max-width: 800px) {
+  .container {
+    padding-bottom: 50px;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #222831;
+    position: relative;
   }
 
+  .text-container {
+    position: relative; 
+    margin-bottom: 120px;
+    z-index: 1;
+  }
 
-@media (max-width:800px){
-  .container {
-  position: relative;
-  /* padding-top: 200px; */
-  padding-bottom: 50px;
-  width: 100% !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #222831;
-}
+  .image-container {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-container img {
+    width: 80%;
+    height: auto;
+    margin-left: 130px;
+  }
+
+  .paragraph-about-me-style {
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .skills-style {
+    position: absolute;
+    margin-top: 30 !important; /* Po përdorim top për të mbajtur fjali në një vend */
+  }
 }
 
 .text-container {
@@ -210,16 +236,14 @@ export default {
   font-family: "Roboto Mono", monospace !important;
   /* max-width: 400px; */
 }
-.download-cv-button{
+.download-cv-button {
   color: #04ecdc;
   background-color: #171a1e;
 }
-.download-cv-button:hover{
+.download-cv-button:hover {
   color: #04ecdc;
   background-color: #171a1e;
   text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
   box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc;
-  
 }
-
 </style>

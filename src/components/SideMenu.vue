@@ -21,26 +21,40 @@
 
   <v-app-bar v-if="width < 800" color="#171a1e" prominent>
     <v-row class="row-icon-mobile-holder">
+      <h2 class="name-style">
+        Arsen <span class="last-name-style">Cenollari</span>
+      </h2>
+      <v-spacer></v-spacer>
+
       <v-app-bar-nav-icon
-    style="color: white;"
-      variant="text"
-      @click.stop="drawer = !drawer"
-    ></v-app-bar-nav-icon>  
+        style="color: white"
+        variant="text"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
     </v-row>
-    
+
     <v-spacer></v-spacer>
   </v-app-bar>
 
-  <v-navigation-drawer style="background-color: #222831 !important; color: white;" v-model="drawer" temporary   location="right">
-  <v-list>
-    <v-list-item
-      v-for="(item, index) in menuItems"
-      :key="index"
-      :title="item.title"
-      link
-    ></v-list-item>
-  </v-list>
-</v-navigation-drawer>
+  <v-navigation-drawer
+    style="background-color: #222831 !important; color: white"
+    v-model="drawer"
+    temporary
+    location="right"
+  >
+    <v-list>
+      <v-list-item
+        v-for="(item, index) in menuItems"
+        :key="index"
+        :title="item.title"
+        link
+      >
+        <template v-slot:prepend>
+          <v-icon class="mobile-icons" :icon="item.icon"></v-icon>
+        </template>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 
 <script>
@@ -51,10 +65,10 @@ export default {
     const drawer = ref(false);
     const width = ref(window.innerWidth);
     const menuItems = ref([
-      { title: "Home" },
-      { title: "Education" },
-      { title: "Contact" },
-      { title: "Projects" },
+      { title: "Home", icon: "mdi-home" },
+      { title: "Education", icon: "mdi-school" },
+      { title: "Contact", icon: "mdi-card-account-mail-outline" },
+      { title: "Projects", icon: "mdi-projector-screen" },
     ]);
 
     const measureWidth = () => {
@@ -80,9 +94,12 @@ export default {
 </script>
 
 <style scoped>
-.row-icon-mobile-holder{
+.row-icon-mobile-holder {
+  margin-left: 10px;
+  padding-right: 15px;
   width: 100%;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
 }
 .menu {
   background-color: #222831;
@@ -110,5 +127,10 @@ export default {
   color: white;
   text-decoration: none !important;
   text-shadow: 0 0 5px #ffff, 0 0 10px #ffff, 0 0 20px #ffff, 0 0 20px #ffff;
+}
+.mobile-icons{
+  color: white !important;
+  text-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 40px #04ecdc;
 }
 </style>
