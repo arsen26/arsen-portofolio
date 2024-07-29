@@ -25,7 +25,9 @@
           :href="pdfUrl"
           download="arsen-cenollari.pdf"
           prepend-icon="mdi-newspaper-variant-multiple"
-          >Download CV</v-btn
+          ><span style="font-family: 'Roboto Mono', monospace !important">
+            Download CV
+          </span></v-btn
         >
       </v-row>
     </div>
@@ -157,7 +159,8 @@ export default {
   transform: translate(-36%, 30%);
 }
 
-.container {
+@media (min-width:800px){
+  .container {
   position: relative;
   padding-top: 200px;
   padding-bottom: 50px;
@@ -167,6 +170,22 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   background-color: #222831;
+}
+  }
+
+
+@media (max-width:800px){
+  .container {
+  position: relative;
+  /* padding-top: 200px; */
+  padding-bottom: 50px;
+  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #222831;
+}
 }
 
 .text-container {

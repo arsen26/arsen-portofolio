@@ -210,6 +210,8 @@ export default {
 }
 .text-style {
   color: white;
+  font-family: "Roboto Mono", monospace !important;
+
 }
 
 .form-container {
@@ -222,6 +224,8 @@ export default {
   align-items: center;
 }
 .submit-email-button {
+  font-family: "Roboto Mono", monospace !important;
+
   background-color: #04ecdc;
 }
 .submit-email-button:hover {

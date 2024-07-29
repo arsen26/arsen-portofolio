@@ -125,11 +125,14 @@ export default {
   padding: 20px;
 }
 .column-title-style {
+  font-family: "Roboto Mono", monospace !important;
   color: white;
   margin-left: 3px;
   text-shadow: 0 0 5px #ffff, 0 0 10px #ffff, 0 0 20px #ffff, 0 0 40px #ffff;
 }
 .list-element-style {
+  font-family: "Roboto Mono", monospace !important;
+
   cursor: pointer;
   color: white;
   padding-top: 5px;
