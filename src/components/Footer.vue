@@ -22,6 +22,23 @@
             }}</v-icon>
             {{ insideElement.insideElementTitle }}
           </li>
+          <h3
+            v-if="i == 0"
+            @click="openMap()"
+            style="cursor: pointer"
+            class="font-weight-light mt-3 text-style font-color"
+          >
+            Tirane, Albania
+          </h3>
+
+          <h3
+            v-if="i == 0"
+            @click="writeEmail()"
+            style="cursor: pointer"
+            class="font-weight-light text-style font-color"
+          >
+            Email: cenollariarsen7@gmail.com
+          </h3>
         </ul>
       </v-col>
       <v-col>
@@ -81,6 +98,16 @@ export default {
     getYear() {
       this.currentYear = new Date().getFullYear();
     },
+    openMap() {
+      window.open(
+        "https://www.google.com/maps/place/Tirana,+Albania/@41.3242769,19.8064902,15z/data=!4m15!1m8!3m7!1s0x1350310470fac5db:0x40092af10653720!2sTirana,+Albania!3b1!8m2!3d41.3275459!4d19.8186982!16zL20vMDdtX2Y!3m5!1s0x1350310470fac5db:0x40092af10653720!8m2!3d41.3275459!4d19.8186982!16zL20vMDdtX2Y?entry=ttu",
+        "_blank"
+      );
+    },
+
+    writeEmail() {
+      window.open("mailto:cenollariarsen7@gmail.com");
+    },
   },
   created() {
     this.getYear();
@@ -89,11 +116,21 @@ export default {
 </script>
 
 <style scoped>
+.text-style {
+  color: white;
+  font-family: "Roboto Mono", monospace !important;
+  text-shadow: 0 0 5px #ffff, 0 0 10px #ffff;
+
+}
+
 .icon-style-at-footer {
   margin-bottom: 5px;
 }
 .footer-style {
+  color: black;
+  font-size: 13px;
   background-color: #04ecdc;
+  justify-content: center;
   opacity: 90%;
   height: 20px;
   box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc;
@@ -132,7 +169,6 @@ export default {
 }
 .list-element-style {
   font-family: "Roboto Mono", monospace !important;
-
   cursor: pointer;
   color: white;
   padding-top: 5px;

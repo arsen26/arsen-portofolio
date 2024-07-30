@@ -57,7 +57,7 @@
 
         <v-col cols="12" sm="5">
           <v-textarea
-            class="text-field-padding"
+            class="text-field-padding your-message-height"
             name="message"
             v-model="message"
             solo
@@ -68,17 +68,17 @@
           <v-btn
             :dark="valid"
             block
-            class="mt-3 submit-email-button"
+            class="submit-email-button"
             @click="sendEmail"
           >
             <span class="submit-button-text"> Submit </span>
           </v-btn>
 
-          <h1 class="font-weight-light text-style-name display-1">
+          <!-- <h1 class="font-weight-light text-style-name display-1">
             Arsen Cenollari
-          </h1>
+          </h1> -->
 
-          <h3
+          <!-- <h3
             @click="openMap()"
             style="cursor: pointer"
             class="font-weight-light mt-3 text-style font-color"
@@ -92,7 +92,7 @@
             class="font-weight-light text-style font-color"
           >
             Email: cenollariarsen7@gmail.com
-          </h3>
+          </h3> -->
         </v-col>
       </v-row>
     </v-form>
@@ -199,6 +199,9 @@ export default {
 </script>
 
 <style scoped>
+.your-message-height{
+  height: 285px;
+}
 .text-field-padding {
   color: white;
 }
@@ -227,7 +230,7 @@ export default {
 }
 .submit-email-button {
   font-family: "Roboto Mono", monospace !important;
-
+  margin-top: -30px;
   background-color: #04ecdc;
 }
 .submit-email-button:hover {

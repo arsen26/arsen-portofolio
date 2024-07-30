@@ -163,7 +163,7 @@ export default {
 @media (min-width: 800px) {
   .container {
     position: relative;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 50px;
     width: 100% !important;
     display: flex;
