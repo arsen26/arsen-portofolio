@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="education-container">
     <v-row style="color: black; text-align: center">
       <v-col>
         <h2 class="education-word-style">Education and trainings</h2>
@@ -75,7 +75,7 @@ export default {
 .year-style {
   color: white;
 }
-.container {
+.education-container {
   background-color: #222831;
   display: flex;
   justify-content: center;
@@ -91,6 +91,7 @@ export default {
   color: white;
   font-size: 100px;
   margin-top: 140px;
+  padding-bottom: 40px;
 }
 
 .text-container-timeline {

@@ -18,7 +18,7 @@
       <i class="bx social-media-icon bxl-linkedin"></i>
       <i class="bx social-media-icon bxl-github"></i>
       <i class="bx social-media-icon bx-news"></i>
-      <v-row style="padding-top: 10px">
+      <v-row style="padding-top: 10px; padding-left: 3px">
         <v-btn
           class="ma-2 download-cv-button"
           outlined
@@ -218,7 +218,10 @@ export default {
 
   .skills-style {
     position: absolute;
-    margin-top: 30 !important; /* Po përdorim top për të mbajtur fjali në një vend */
+    margin-top: 30 !important;
+  }
+  .download-cv-button {
+    margin-right: 10px !important;
   }
 }
 

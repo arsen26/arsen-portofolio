@@ -1,17 +1,19 @@
 <template>
-  <atom-spinner
-    v-if="isLoading"
-    :animation-duration="1000"
-    :size="60"
-    color="#ff1d5e"
-  />
-  <div class="container">
+  <div class="contact-container">
+    <atom-spinner
+      v-if="isLoading"
+      :animation-duration="1000"
+      :size="60"
+      color="#ff1d5e"
+    />
     <v-form
       class="form-container"
       @submit.prevent="sendEmail"
       ref="form"
       :lazy-validation="lazy"
     >
+      <h2 class="contact-me-title">Contact Me!</h2>
+
       <v-row justify="center">
         <v-col cols="12" sm="6">
           <v-text-field
@@ -199,7 +201,16 @@ export default {
 </script>
 
 <style scoped>
-.your-message-height{
+.contact-me-title{
+  font-family: "Russian Dollmaker";
+  margin-top: 100px;
+  font-size: 100px;
+  font-weight: 100;
+  color: white;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.your-message-height {
   height: 285px;
 }
 .text-field-padding {
@@ -221,7 +232,7 @@ export default {
   padding-top: 40px;
   width: 90%;
 }
-.container {
+.contact-container {
   display: flex;
   background-color: #222831;
   justify-content: center;

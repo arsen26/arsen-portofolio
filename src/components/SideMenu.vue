@@ -11,6 +11,7 @@
           class="button-style"
           v-for="(item, index) in menuItems"
           :key="index"
+          @click="$emit('scroll-to', item.id)"
         >
           <span>{{ item.title }}</span>
         </v-btn>
@@ -22,7 +23,8 @@
   <v-app-bar v-if="width < 800" color="#171a1e" prominent>
     <v-row class="row-icon-mobile-holder">
       <h2 class="name-style name-style-mobile">
-        Arsen <span class="last-name-style last-name-style-mobile">Cenollari</span>
+        Arsen
+        <span class="last-name-style last-name-style-mobile">Cenollari</span>
       </h2>
       <v-spacer></v-spacer>
 
@@ -48,6 +50,8 @@
         :key="index"
         :title="item.title"
         link
+        @click="$emit('scroll-to', item.id)"
+        drawer="false;"
       >
         <template v-slot:prepend>
           <v-icon class="mobile-icons" :icon="item.icon"></v-icon>
@@ -65,12 +69,20 @@ export default {
     const drawer = ref(false);
     const width = ref(window.innerWidth);
     const menuItems = ref([
-      { title: "Home", icon: "mdi-home" },
-      { title: "Education", icon: "mdi-school" },
-      { title: "Contact", icon: "mdi-card-account-mail-outline" },
-      { title: "Projects", icon: "mdi-projector-screen" },
+      { title: "Home", id: "home-container", icon: "mdi-home" },
+      { title: "Education", id: "education-container", icon: "mdi-school" },
+      {
+        title: "Contact",
+        id: "contact-container",
+        icon: "mdi-card-account-mail-outline",
+      },
+      {
+        title: "Projects",
+        id: "projects-container",
+        icon: "mdi-projector-screen",
+      },
     ]);
-
+    
     const measureWidth = () => {
       width.value = window.innerWidth;
     };
@@ -105,6 +117,10 @@ export default {
   background-color: #222831;
   border-radius: 0px;
   height: 70px;
+  position: fixed ;
+  top: 0;
+  width: 100%;
+  z-index: 1000;  
 }
 .toolbar {
   background-color: #171a1e;
@@ -147,14 +163,13 @@ export default {
 
 @media (max-width: 800px) {
   .name-style-mobile {
-  animation: glow 2s infinite;
-  animation-delay: 0s;
-}
-.last-name-style-mobile {
-  animation: glowSurname 2s infinite;
-  animation-delay: 1.5s;
-}
-
+    animation: glow 2s infinite;
+    animation-delay: 0s;
+  }
+  .last-name-style-mobile {
+    animation: glowSurname 2s infinite;
+    animation-delay: 1.5s;
+  }
 }
 .name-style {
   padding-left: 15px;

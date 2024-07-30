@@ -112,7 +112,7 @@ export default {
   font-size: 100px;
   font-weight: 100;
   color: white;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 .card-text-container {
   padding: 20px;

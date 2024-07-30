@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="project-container">
     <v-row>
       <span class="projects-title">Projects</span>
     </v-row>
@@ -69,9 +69,9 @@ export default {
   font-size: 100px;
   font-weight: 100;
   color: white;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
-.container {
+.project-container {
   background-color: #222831;
   display: flex;
   flex-direction: column;

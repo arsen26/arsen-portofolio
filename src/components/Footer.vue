@@ -15,6 +15,7 @@
           <li
             class="list-element-style"
             v-for="(insideElement, index) in column.insideElements"
+            @click="scrollToSection(insideElement.id)"
             :key="index"
           >
             <v-icon class="icon-style-at-footer" v-if="i !== 0">{{
@@ -48,6 +49,7 @@
           append-inner-icon="mdi-email"
           variant="outlined"
           dense
+          @click="writeEmail()"
         ></v-text-field>
       </v-col>
     </v-row>
@@ -86,9 +88,21 @@ export default {
         {
           title: "Navigate",
           insideElements: [
-            { insideElementTitle: "Home", path: "mdi-home-circle" },
-            { insideElementTitle: "Education", path: "mdi-school" },
-            { insideElementTitle: "Projects", path: "mdi-projector-screen" },
+            {
+              insideElementTitle: "Home",
+              id: "home-container",
+              path: "mdi-home-circle",
+            },
+            {
+              insideElementTitle: "Education",
+              id: "education-container",
+              path: "mdi-school",
+            },
+            {
+              insideElementTitle: "Projects",
+              id: "projects-container",
+              path: "mdi-projector-screen",
+            },
           ],
         },
       ],
@@ -108,6 +122,14 @@ export default {
     writeEmail() {
       window.open("mailto:cenollariarsen7@gmail.com");
     },
+    scrollToSection(sectionId) {
+      console.log(sectionId);
+      const section = document.getElementById(sectionId);
+      console.log(section, "=-=>> section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    },
   },
   created() {
     this.getYear();
@@ -120,7 +142,6 @@ export default {
   color: white;
   font-family: "Roboto Mono", monospace !important;
   text-shadow: 0 0 5px #ffff, 0 0 10px #ffff;
-
 }
 
 .icon-style-at-footer {

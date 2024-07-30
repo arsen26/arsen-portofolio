@@ -3,12 +3,12 @@
     <isLoadingComponent :isLoading="isLoading" />
     <v-app class="entire-app">
       <v-main>
-        <SideMenu class="menu-navigation-bar" />
-        <Hero />
-        <EducationVue />
-        <Projects />
-        <Services />
-        <contactMe />
+        <SideMenu @scroll-to="scrollToSection" class="menu-navigation-bar" />
+        <Hero id="home-container" />
+        <EducationVue id="education-container" />
+        <Projects id="projects-container" />
+        <Services id="services-container" />
+        <contactMe id="contact-container" />
         <Footer />
       </v-main>
     </v-app>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { ref, nextTick, onMounted } from "vue";
 import SideMenu from "./components/SideMenu.vue";
 import Hero from "./components/Hero.vue";
 import EducationVue from "./components/Education.vue";
@@ -37,22 +38,33 @@ export default {
     contactMe,
     isLoadingComponent,
   },
-  data() {
-    return {
-      isLoading: true,
+  setup() {
+    const isLoading = ref(true);
+
+    const scrollToSection = async (sectionId) => {
+      await nextTick();
+      console.log(sectionId);
+      const section = document.getElementById(sectionId);
+      console.log(section, "=-=>> section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     };
-  },
-  created() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 5000);
+
+    onMounted(() => {
+      setTimeout(() => {
+        isLoading.value = false;
+      }, 5000);
+    });
+
+    return { isLoading, scrollToSection };
   },
 };
 </script>
 
 <style scoped>
 .menu-navigation-bar {
-  position: fixed;
+  position: fixed ;
   top: 0;
   width: 100%;
   z-index: 1000;
