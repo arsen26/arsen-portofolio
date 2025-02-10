@@ -102,6 +102,11 @@ export default {
 
     return { width, menuItems, drawer };
   },
+  computed:{
+    studentPassed(){
+      return this.arrayOfStudents.filter(student => student.grade > 5)
+    }
+  }
 };
 </script>
 

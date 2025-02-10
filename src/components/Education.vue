@@ -43,24 +43,24 @@ export default {
         {
           year: 2020,
           title: "Highschool diploma",
-          description: "gg ere",
+          description: "I completed high school in 2020 with excellent results. During this period, I was recognized for my perseverance, strong will, and dedication to learning, demonstrating a consistent commitment to both academic and personal growth.",
         },
         {
           year: 2023,
           title: "University diploma",
-          description: "gg ere",
+          description: "I completed my Bachelor's in Computer Science in 2023 at the University of Tirana, where I gained knowledge in programming languages like C, C++, HTML, CSS, and JavaScript. I also worked as a designer on a conference platform project and developed skills in teamwork, deadlines, and basic networking and operating systems.",
         },
         {
           year: 2023,
           title: "Internship",
           description:
-            "I started a new position job as a front end developer at 2RM Lab",
+            "During my internship at 2RM Lab as a Front-End Development Intern, I gained valuable experience working with JavaScript and Vue.js. I developed strong teamwork and problem-solving skills, while learning to effectively analyze and address programming issues. I worked with Vue.js to create reusable components and build dynamic, data-driven applications. I also utilized GitLab for version control, collaboration, and project management, ensuring smooth workflows and efficient task management. This experience allowed me to enhance my technical abilities while contributing to the success of the team.",
         },
         {
           year: "2023 - Now",
           title: "Front End Developer",
           description:
-            "I started a new position job as a front end developer at 2RM Lab",
+            "At 2RM Lab, I worked extensively on developing a financial and managerial software using Vue.js, Vuex, Vuetify, and Vue Router. I implemented full CRUD functionalities, ensuring efficient data management. I also focused on maintaining the visual aspects of the app, adding new features, and fixing bugs. Additionally, I contributed to building responsive static web pages and developing dynamic web applications to improve user interactivity and data handling.",
         },
       ],
     };

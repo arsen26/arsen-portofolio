@@ -7,6 +7,7 @@
         class="atom-spinner-style"
       />
     </div>
+
   </template>
   
   <script>

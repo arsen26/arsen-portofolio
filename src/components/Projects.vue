@@ -20,7 +20,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="#021526" text="Explore"></v-btn>
+            <v-btn @click="sendToGitHub" color="#021526" text="Explore"></v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -30,6 +30,7 @@
 
 <script>
 import AnnaPhotographers from "@/assets/anna-photographers.png";
+import AceShare from "@/assets/Ace.png"
 export default {
   data() {
     return {
@@ -38,18 +39,24 @@ export default {
         {
           title: "Anna Photographers",
           subtitle: "Photography project",
-          description: "test",
+          description: "Website for Photography Studio",
           image: AnnaPhotographers,
         },
         {
-          title: "Anna Photographers",
-          subtitle: "Photography project",
-          description: "test",
-          image: AnnaPhotographers,
+          title: "Ace Share",
+          subtitle: "Personal project",
+          description: "You can share folders from pc to your phone.",
+          image: AceShare,
         },
       ],
     };
   },
+  methods:{
+     sendToGitHub() {
+    window.open("https://github.com/arsen26/anna-photographers-vue3", "_blank");
+}
+
+  }
 };
 </script>
 
