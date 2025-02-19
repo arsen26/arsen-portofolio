@@ -4,7 +4,7 @@
       <span class="projects-title">Projects</span>
     </v-row>
     <v-row class="row-card-container">
-      <v-col v-for="(project, index) in projects">
+      <v-col v-for="(project, index) in projects" :key="index">
         <v-card :key="index" class="mx-auto project-card-style" max-width="400">
           <v-img
             class="align-end text-white"
@@ -12,7 +12,7 @@
             :src="project.image"
             cover
           >
-            <v-card-title>{{ project.title }}</v-card-title>
+            <v-card-title class="project-title">{{ project.title }}</v-card-title>
           </v-img>
           <v-card-text>
             <div>{{ project.subtitle }}</div>
@@ -20,7 +20,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn @click="sendToGitHub" color="#021526" text="Explore"></v-btn>
+            <v-btn @click="sendToGitHub(project.github)" color="#021526" text="Explore"></v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -30,7 +30,7 @@
 
 <script>
 import AnnaPhotographers from "@/assets/anna-photographers.png";
-import AceShare from "@/assets/Ace.png"
+import AceShare from "@/assets/Ace2.png"
 export default {
   data() {
     return {
@@ -41,19 +41,22 @@ export default {
           subtitle: "Photography project",
           description: "Website for Photography Studio",
           image: AnnaPhotographers,
+          github:"https://github.com/arsen26/anna-photographers-vue3"
+
         },
         {
           title: "Ace Share",
           subtitle: "Personal project",
           description: "You can share folders from pc to your phone.",
           image: AceShare,
+          github:"https://github.com/arsen26/qr-code-folder-share/tree/2-monitor-version"
         },
       ],
     };
   },
   methods:{
-     sendToGitHub() {
-    window.open("https://github.com/arsen26/anna-photographers-vue3", "_blank");
+     sendToGitHub(itemGit) {
+    window.open(`${itemGit}`, "_blank");
 }
 
   }
@@ -61,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+.project-title{
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+}
 .project-card-style:hover {
   transform: scale(1.01);
   box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc,
