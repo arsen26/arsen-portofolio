@@ -56,5 +56,18 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsen26/arsen-portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arsen26/arsen-portofolio/issues"
+  },
+  "homepage": "https://github.com/arsen26/arsen-portofolio#readme"
 }

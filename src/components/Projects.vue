@@ -5,7 +5,7 @@
     </v-row>
     <v-row class="row-card-container">
       <v-col v-for="(project, index) in projects" :key="index">
-        <v-card :key="index" class="mx-auto project-card-style" max-width="400">
+        <v-card :key="index" class="mx-auto project-card-style" width="330">
           <v-img
             class="align-end text-white"
             height="200"
@@ -72,9 +72,14 @@ export default {
   box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc,
     0 0 55px #04ecdc;
 }
+.project-card-style{
+  height:350px;
+}
 .row-card-container {
   display: flex;
   flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .projects-title {
   font-family: "Russian Dollmaker";
