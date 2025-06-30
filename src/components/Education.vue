@@ -43,22 +43,26 @@ export default {
         {
           year: 2020,
           title: "High School Diploma",
-          description: "Completed high school with excellent results, showcasing perseverance and dedication to learning. This period helped me build a strong foundation for future academic and professional growth.",
+          description:
+            "Completed high school with excellent results, showcasing perseverance and dedication to learning. This period helped me build a strong foundation for future academic and professional growth.",
         },
         {
           year: 2023,
           title: "Bachelor's in Computer Science",
-          description: "Graduated from the University of Tirana, gaining skills in C, C++, HTML, CSS, JavaScript, teamwork, and project development. This experience strengthened my problem-solving abilities and technical expertise.",
+          description:
+            "Graduated from the University of Tirana, gaining skills in C, C++, HTML, CSS, JavaScript, teamwork, and project development. This experience strengthened my problem-solving abilities and technical expertise.",
         },
         {
           year: 2023,
           title: "Internship at 2RM Lab",
-          description: "Worked with Vue.js and JavaScript, developed reusable components, solved programming challenges, and used GitLab for version control. This internship allowed me to improve my coding skills and learn to work efficiently in a team environment.",
+          description:
+            "Worked with Vue.js and JavaScript, developed reusable components, solved programming challenges, and used GitLab for version control. This internship allowed me to improve my coding skills and learn to work efficiently in a team environment.",
         },
         {
           year: "2023 - Now",
           title: "Front-End Developer at 2RM Lab",
-          description: "Developed financial software using Vue.js, Vuex, Vuetify, and Vue Router, implementing CRUD, UI enhancements, and responsive web pages. This role has helped me refine my technical skills and contribute effectively to large-scale projects.",
+          description:
+            "Developed financial software using Vue.js, Vuex, Vuetify, and Vue Router, implementing CRUD, UI enhancements, and responsive web pages. This role has helped me refine my technical skills and contribute effectively to large-scale projects.",
         },
       ],
     };
@@ -107,7 +111,8 @@ export default {
 
 .timeline-container {
   background-color: #090809;
-  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 10px #04ecdc, 0 0 30px #04ecdc;
+  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 10px #04ecdc,
+    0 0 30px #04ecdc;
   border-radius: 10px;
   padding: 20px;
   word-wrap: break-word;
@@ -118,12 +123,14 @@ export default {
 }
 
 .timeline-container:hover {
-  box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc, 0 0 55px #04ecdc;
+  box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc,
+    0 0 55px #04ecdc;
   transform: scale(1.01);
 }
 
 .neon-dot {
-  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc, 0 0 40px #04ecdc !important;
+  box-shadow: 0 0 5px #04ecdc, 0 0 10px #04ecdc, 0 0 20px #04ecdc,
+    0 0 40px #04ecdc !important;
 }
 
 @media (max-width: 800px) {

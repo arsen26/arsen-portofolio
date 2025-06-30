@@ -82,7 +82,7 @@ export default {
         icon: "mdi-projector-screen",
       },
     ]);
-    
+
     const measureWidth = () => {
       width.value = window.innerWidth;
     };
@@ -102,11 +102,11 @@ export default {
 
     return { width, menuItems, drawer };
   },
-  computed:{
-    studentPassed(){
-      return this.arrayOfStudents.filter(student => student.grade > 5)
-    }
-  }
+  computed: {
+    studentPassed() {
+      return this.arrayOfStudents.filter((student) => student.grade > 5);
+    },
+  },
 };
 </script>
 
@@ -122,10 +122,10 @@ export default {
   background-color: #222831;
   border-radius: 0px;
   height: 70px;
-  position: fixed ;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;  
+  z-index: 1000;
 }
 .toolbar {
   background-color: #171a1e;

@@ -201,7 +201,7 @@ export default {
 </script>
 
 <style scoped>
-.contact-me-title{
+.contact-me-title {
   font-family: "Russian Dollmaker";
   margin-top: 100px;
   font-size: 100px;

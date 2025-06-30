@@ -5,7 +5,7 @@
       <h1>I'm <span class="skills-style" id="typed"></span></h1>
 
       <p class="paragraph-about-me-style">
-        ...a 22-year-old with a degree in Computer Science from the
+        ...a 23-year-old with a degree in Computer Science from the
         <a class="link-for-faculty" @click.prevent="openUniversity"
           >Faculty of Natural Sciences</a
         >

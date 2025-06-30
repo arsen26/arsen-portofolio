@@ -12,7 +12,9 @@
             :src="project.image"
             cover
           >
-            <v-card-title class="project-title">{{ project.title }}</v-card-title>
+            <v-card-title class="project-title">{{
+              project.title
+            }}</v-card-title>
           </v-img>
           <v-card-text>
             <div>{{ project.subtitle }}</div>
@@ -20,7 +22,11 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn @click="sendToGitHub(project.github)" color="#021526" text="Explore"></v-btn>
+            <v-btn
+              @click="sendToGitHub(project.github)"
+              color="#021526"
+              text="Explore"
+            ></v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -30,7 +36,7 @@
 
 <script>
 import AnnaPhotographers from "@/assets/anna-photographers.png";
-import AceShare from "@/assets/Ace2.png"
+import AceShare from "@/assets/Ace2.png";
 export default {
   data() {
     return {
@@ -41,30 +47,29 @@ export default {
           subtitle: "Photography project",
           description: "Website for Photography Studio",
           image: AnnaPhotographers,
-          github:"https://github.com/arsen26/anna-photographers-vue3"
-
+          github: "https://github.com/arsen26/anna-photographers-vue3",
         },
         {
           title: "Ace Share",
           subtitle: "Personal project",
           description: "You can share folders from pc to your phone.",
           image: AceShare,
-          github:"https://github.com/arsen26/qr-code-folder-share/tree/2-monitor-version"
+          github:
+            "https://github.com/arsen26/qr-code-folder-share/tree/2-monitor-version",
         },
       ],
     };
   },
-  methods:{
-     sendToGitHub(itemGit) {
-    window.open(`${itemGit}`, "_blank");
-}
-
-  }
+  methods: {
+    sendToGitHub(itemGit) {
+      window.open(`${itemGit}`, "_blank");
+    },
+  },
 };
 </script>
 
 <style scoped>
-.project-title{
+.project-title {
   background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
 }
 .project-card-style:hover {
@@ -72,8 +77,8 @@ export default {
   box-shadow: 0 0 5px #04ecdc, 0 0 15px #04ecdc, 0 0 20px #04ecdc,
     0 0 55px #04ecdc;
 }
-.project-card-style{
-  height:350px;
+.project-card-style {
+  height: 350px;
 }
 .row-card-container {
   display: flex;
